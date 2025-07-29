@@ -131,8 +131,7 @@ const SidebarNav = ({ onClose }) => {
       <Box sx={{ padding: '16px' }}>
         <Divider sx={{ mb: 1 }} />
         <Link
-          href="/"
-          // href="/profile"
+          href="/profile"
           onClick={onClose}
           style={{
             display: 'flex',

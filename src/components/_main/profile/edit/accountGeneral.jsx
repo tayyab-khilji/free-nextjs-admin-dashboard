@@ -15,7 +15,6 @@ import EditIcon from '@mui/icons-material/Edit'; // Or use a React Icon: import 
 
 // component
 import UploadAvatar from 'src/components/upload/UploadAvatar';
-import countries from 'src/components/_main/checkout/countries.json';
 // api
 import * as api from 'src/services';
 // yup
@@ -58,7 +57,7 @@ export default function AccountGeneral() {
     }
   });
   const { mutate: avatarMutate, isLoading: avatarLoading } = useMutation(api.singleDeleteFile, {
-    onSuccess: () => {},
+    onSuccess: () => { },
     onError: (error) => {
       toast.error(error.response.data.message);
     }
@@ -222,7 +221,7 @@ export default function AccountGeneral() {
   }, [apicall]);
 
   const { mutate: deleteUserMutate, isLoading: deleteLoading } = useMutation(api.deleteUser, {
-    onSuccess: (res) => {}
+    onSuccess: (res) => { }
   });
 
   const handleDeleteAccount = () => {

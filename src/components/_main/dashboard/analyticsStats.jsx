@@ -5,7 +5,9 @@ import {
   Card,
   Typography,
   Grid,
-  Skeleton
+  Skeleton,
+  useTheme,
+  useMediaQuery
 } from '@mui/material';
 
 import PropTypes from 'prop-types';
@@ -17,6 +19,9 @@ import NextLink from 'next/link';
 
 export default function DashboardStats({ data: dashboardStats, isLoading: dataLoading }) {
   // Sample data for stats, bank cards, and table rows
+
+  const theme = useTheme();
+  const isDeskTop = useMediaQuery(theme.breakpoints.up('md'));
 
   const formatChange = (current, previous) => {
     if (previous === 0) {

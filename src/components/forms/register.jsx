@@ -57,8 +57,8 @@ export default function RegisterForm() {
   const phoneRegExp =
     /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
   const RegisterSchema = Yup.object().shape({
-    // firstName: Yup.string().max(50, 'Too long!').required('First name is required'),
-    // lastName: Yup.string().max(50, 'Too long!').required('Last name is required'),
+    firstName: Yup.string().max(50, 'Too long!').required('First name is required'),
+    lastName: Yup.string().max(50, 'Too long!').required('Last name is required'),
     // email: Yup.string().email('Enter valid email').required('Email is required'),
     // phone: Yup.string().matches(phoneRegExp, 'Phone number is not valid').required('Phone number is required'),
     // password: Yup.string().required('Password is required').min(8, 'Password should be 8 characters or longer.')
@@ -69,8 +69,8 @@ export default function RegisterForm() {
   });
   const formik = useFormik({
     initialValues: {
-      // firstName: '',
-      // lastName: '',
+      firstName: '',
+      lastName: '',
       // phone: '',
       // gender: 'male',
       // email: '',

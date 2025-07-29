@@ -5,7 +5,9 @@ import PropTypes from 'prop-types';
 import AuthGuard from 'src/guards/auth';
 
 export default function ProfileLayout({ children }) {
-  return <AuthGuard>{children}</AuthGuard>;
+  // return <AuthGuard>{children}</AuthGuard>;
+  return <>{children}</>;
+
 }
 
 ProfileLayout.propTypes = {

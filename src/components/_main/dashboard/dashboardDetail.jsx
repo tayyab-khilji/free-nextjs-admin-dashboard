@@ -10,8 +10,8 @@ import { Box, Container, Grid } from '@mui/material';
 import { useQuery } from 'react-query';
 import toast from 'react-hot-toast';
 
-export default function VendorDashboard(isVendor) {
-    isVendor = true;
+export default function VendorDashboard() {
+
     // const { data: dashboard, isLoading } = useQuery(
     //     isVendor ? 'get-dashboard' : 'dashboard-analytics',
     //     api[isVendor ? 'getDashboard' : 'adminDashboardAnalytics'],

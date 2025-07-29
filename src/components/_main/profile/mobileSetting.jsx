@@ -32,9 +32,7 @@ import { setThemeMode } from 'src/redux/slices/settings';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { setLogout } from 'src/redux/slices/user';
-import { resetWishlist } from 'src/redux/slices/wishlist';
 import { deleteCookies } from 'src/hooks/cookies';
-import ROLES from 'src/utils/userRoles';
 
 export default function MobileSetting() {
   const { user, isAuthenticated } = useSelector(({ user }) => user);
@@ -113,9 +111,7 @@ export default function MobileSetting() {
               <ListItemButton
                 onClick={() => {
                   router.push(
-                    user.role === ROLES.ADMIN || user.role === ROLES.SUPER_ADMIN
-                      ? '/admin/settings'
-                      : '/profile/general'
+                    '/profile/general'
                   );
                 }}
                 sx={{ py: 2 }}
@@ -131,9 +127,7 @@ export default function MobileSetting() {
               <ListItemButton
                 onClick={() => {
                   router.push(
-                    user.role === ROLES.ADMIN || user.role === ROLES.SUPER_ADMIN
-                      ? '/admin/settings/change-password'
-                      : '/profile/change-password'
+                    '/profile/change-password'
                   );
                 }}
                 sx={{ py: 2 }}
