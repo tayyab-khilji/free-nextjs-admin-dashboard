@@ -1,0 +1,72 @@
+.coming-soon-container {
+  text-align: center;
+  padding: 50px;
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.coming-soon-container h1 {
+  font-size: 34px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+.coming-soon-container p {
+  font-size: 17px;
+  color: #555;
+  margin-bottom: 20px;
+}
+.coming-soon-container .create-account-btn {
+  background-color: #65d235 !important;
+  color: white;
+  padding: 10px 150px;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 15px;
+}
+.coming-soon-container .signin-container {
+  background-color: #cbd5e0 !important;
+  color: #0b1c13;
+  padding: 7px 110px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 15px;
+}
+.coming-soon-container .signin-container a {
+  color: black !important;
+  color: #0b1c13 !important;
+}
+.coming-soon-container .seller-register {
+  font-size: 16px;
+}
+.coming-soon-container .seller-register a {
+  color: #65d235 !important;
+  font-weight: normal;
+  text-decoration: none;
+  font-size: 14px !important;
+}
+
+@media (max-width: 640px) {
+  .coming-soon-container .signin-container {
+    padding: 5px 30px;
+  }
+  .coming-soon-container .create-account-btn {
+    padding: 8px 75px;
+  }
+  .coming-soon-container {
+    height: 100%;
+  }
+}/*# sourceMappingURL=comingsoon.css.map */

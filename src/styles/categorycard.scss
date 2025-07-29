@@ -1,0 +1,55 @@
+@media (max-width: 640px) {
+  .cardcontainer .MuiPaper-root .css-1pj5ry-MuiTypography-root {
+    font-size: 11px;
+  }
+  .cardcontainer {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    justify-items: center !important;
+    gap: 0px !important;
+  }
+
+  .css-tptqb7 {
+    display: block !important;
+  }
+  .css-19r6kue-MuiContainer-root {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .css-7cfqaj-MuiStack-root {
+    padding-left: 20px !important;
+  }
+  .css-32c84q-MuiStack-root {
+    display: flex;
+    justify-content: center;
+  }
+  .category_card p {
+    font-size: 7.9px !important;
+  }
+}
+
+.css-tptqb7 {
+  display: block !important;
+}
+
+@media (max-width: 1024px) {
+  .css-s68u61-MuiPaper-root-MuiCard-root {
+    margin: 0px !important;
+  }
+  .category_card p {
+    font-size: 12px;
+    font-weight: 700;
+    max-width: 100%;
+  }
+  .cardcontainer {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    justify-items: center !important;
+    gap: 0px !important;
+  }
+}
+
+.cardcontainer {
+  // gap: 10px !important;
+  margin-left: -8px !important;
+}

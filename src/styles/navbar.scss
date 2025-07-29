@@ -1,0 +1,15 @@
+@media (max-width: 640px) {
+  .navbar_header {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: -10px;
+  }
+  .signup_btn {
+    margin-left: -120px;
+  }
+  .edit_icon{
+    margin-left: 19px !important;
+    position: relative !important;
+    // left: 20px !important;
+  }
+}

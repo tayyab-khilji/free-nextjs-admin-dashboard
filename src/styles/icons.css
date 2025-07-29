@@ -1,0 +1,61 @@
+.carousel-wrap .css-vdzj4d {
+  flex-direction: column;
+  right: -15px;
+}
+
+.css-69i1ev {
+  margin-top: -24px;
+}
+
+@media (min-width: 900px) {
+  .css-rb22od-MuiPaper-root .css-m2ooda-MuiPaper-root {
+    padding-top: 45%;
+  }
+}
+.css-15m5nt2 {
+  width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .cardcontainer {
+    padding-left: 0px !important;
+  }
+}
+
+
+@media (max-width: 640px) {
+  .css-1v3caum .css-1cb1com-MuiListItem-root {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .css-1idn90j-MuiGrid-root .css-zn0auy-MuiPaper-root-MuiCard-root {
+    padding: 0px;
+  }
+  .css-v78hre .css-10xz4k5 {
+    padding: 0px;
+  }
+  .css-zow5z4-MuiGrid-root .css-1i7zbhi {
+    justify-content: center;
+  }
+  .css-zow5z4-MuiGrid-root .css-1e6hl2n {
+    display: flex;
+    align-items: center;
+  }
+  .css-1e6hl2n .css-6q8eqf-MuiTypography-root {
+    font-size: 20px;
+  }
+  .css-69i1ev {
+    margin-top: -86px;
+  }
+  .css-zow5z4-MuiGrid-root {
+    margin-top: 0px;
+  }
+  .css-7estpl img {
+    height: 70% !important;
+  }
+  .MuiBox-root .css-19r6kue-MuiContainer-root {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}/*# sourceMappingURL=icons.css.map */

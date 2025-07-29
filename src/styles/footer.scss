@@ -1,0 +1,90 @@
+@media (max-width: 1024px) {
+  .appleplaystore_column {
+    display: none;
+  }
+  .footerparent {
+    width: 100% !important;
+    padding-left: 44px !important;
+    padding-right: 14px !important;
+  }
+
+  .footerlinks .css-afnxsl-MuiTypography-root{
+    font-size: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .topstores .css-1anjrud {
+    gap: 0px;
+    padding: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  @media (max-width: 640px) {
+    .footertext{
+      font-size: 12px !important;
+    }
+    .appleplaystore_column {
+      display: flex;
+      flex-direction: column;
+      padding-left: 40px;
+      order: -2;
+    }
+    .playgoogle_btn {
+      display: flex;
+      gap: 20px;
+    }
+    .footerparent {
+      padding-left: 50px !important;
+      order: -1;
+    }
+    .footerlogos{
+      order: -3;
+      padding-left: 40px;
+      padding-top: 20px;
+
+    }
+    .css-n7qpeq-MuiPaper-root-MuiAppBar-root .actionbar,
+    .search_btn {
+      display: none !important;
+    }
+
+    .css-n7qpeq-MuiPaper-root-MuiAppBar-root,
+    .css-lts5kb {
+      display: none !important;
+    }
+
+    .mobile_textfield .MuiInputBase-root {
+      background-color: white;
+      margin-bottom: 10px;
+    }
+
+    .css-u1xvfe-MuiStack-root,
+    .css-1c5mcex-MuiTypography-root {
+      height: 70px;
+    }
+
+    .css-15o0o81-MuiPaper-root-MuiAppBar-root {
+      padding-bottom: 10px;
+    }
+
+    .category_card p {
+      font-size: 12px;
+      // font-weight: 800;
+      margin-bottom: 5px;
+    }
+
+    .css-v2woy3-MuiStack-root > .css-13jwjkb-MuiStack-root > :not(style) ~ :not(style) {
+      margin-top: 6px;
+    }
+
+    .css-o96awy-MuiStack-root {
+      margin-top: -20px !important;
+    }
+    .footerpace {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+    }
+  }
+}

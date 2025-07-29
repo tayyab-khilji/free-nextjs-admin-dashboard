@@ -1,0 +1,134 @@
+.registration-container {
+  background-color: #65d235; /* Green Background */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 600px;
+  height: 140px;
+  margin: auto;
+}
+.registration-container img {
+  width: 120px;
+  padding-top: 20px;
+}
+
+.highlight {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.tagline {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.email-container {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 40px;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 24px 24px 0 0; /* Sirf top-left aur top-right rounded */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.email-title {
+  color: #003c26;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.email-greeting {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #000000;
+  font-size: 14px;
+}
+
+.email-body {
+  margin-bottom: 15px;
+  color: #000000;
+  font-size: 14px;
+}
+
+.email-footer {
+  color: #000000;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.email-contact {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.email-contact p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.email-signoff {
+  color: #003c26;
+  font-size: 15px;
+  font-weight: 800;
+}
+.email-team {
+  color: #003c26;
+  font-size: 14px;
+  font-weight: 400;
+}
+.contact {
+  margin-top: 10px;
+  font-size: 12px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.contact-item .text {
+  margin-top: 10px;
+}
+.contact-item img {
+  width: 25px;
+  margin-top: 10px;
+}
+
+// main-container-----
+
+.main-container {
+  background-color: #65d235;
+  width: 600px;
+  margin: auto;
+}
+
+// footer container-----
+.footer-container {
+  background-color: #c4ecdb;
+  width: 600px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.connect-title {
+  color: #000000;
+}
+.foterpara {
+  background-color: #d0d5dd;
+  width: 600px;
+  margin: auto;
+  text-align: center;
+  font-size: 10px;
+  padding: 20px;
+}
+.foterpara a {
+  text-decoration-line: underline;
+  color: black;
+}

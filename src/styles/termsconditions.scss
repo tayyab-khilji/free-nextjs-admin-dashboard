@@ -1,0 +1,94 @@
+.terms-container {
+  max-width: 750px;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  section {
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 1em;
+    color: #000000;
+  }
+
+  p {
+    font-size: 13px;
+    color: #000000 !important;
+  }
+  ol {
+    padding-left: 20px;
+  }
+
+  ol li {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .para {
+    margin-bottom: 20px !important;
+  }
+  ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+
+  ul li {
+    font-size: 14px;
+    font-size: 14px;
+  }
+}
+
+.privacy-container {
+  h1 {
+    font-size: 1em;
+    color: #000000;
+    text-align: start;
+  }
+
+  .intro {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 1rem;
+    color: #000;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 1rem;
+    color: #444;
+    margin-top: 15px;
+  }
+
+  p {
+    font-size: 13px;
+    color: #333;
+  }
+
+  ul {
+    padding-left: 20px;
+    list-style-type: disc;
+
+    li {
+      font-size: 13px;
+    }
+  }
+
+  .ccpa,
+  .coppa {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,19 @@
+@media (max-width: 640px) {
+  .css-zn0auy-MuiPaper-root-MuiCard-root {
+    padding: 0px;
+  }
+  .addaddress_btn {
+    padding-bottom: 20px !important;
+    padding-right: 25px !important;
+  }
+  .accordian_text {
+    font-size: 13px !important;
+  }
+  .css-1o2jhdo .css-1ipmxcu-MuiButtonBase-root-MuiButton-root-MuiLoadingButton-root {
+    display: none;
+  }
+}
+.addaddress_btn {
+  padding-bottom: 20px !important;
+  padding-right: 25px !important;
+}/*# sourceMappingURL=add-address.css.map */

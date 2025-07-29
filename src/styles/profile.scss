@@ -1,0 +1,91 @@
+@media (max-width: 640px) {
+  .css-bzxxfl-MuiButtonBase-root-MuiButton-root-MuiLoadingButton-root {
+    line-height: 18px !important;
+  }
+  .css-ewjis4 .css-1qxnxa4-MuiButtonBase-root-MuiButton-root-MuiLoadingButton-root {
+    line-height: 1;
+  }
+  .css-ewjis4 .css-15h8nb4-MuiButtonBase-root-MuiButton-root {
+    line-height: 1;
+  }
+  .sidebar_width {
+    flex-basis: 70% !important;
+  }
+  .sidebar_icon {
+    display: flex !important;
+    justify-content: space-between !important;
+  }
+  .profileview,
+  .recent_order {
+    box-shadow: none !important;
+    border: none !important;
+
+    padding: 0px !important;
+  }
+  .managebtn{
+    height: 22px !important;
+  }
+  
+}
+
+.profile-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+
+  .reset-button,
+  .edit-button {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 50px;
+    padding: 8px 26px;
+    font-size: 14px;
+    text-transform: none;
+    align-self: center; // center horizontally
+  }
+
+  .reset-button {
+    background-color: white !important;
+    color: #003c26;
+    border: 1px solid gray;
+  }
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+    justify-content: flex-end;
+
+    .reset-button,
+    .edit-button {
+      width: 160px;
+    }
+  }
+}
+
+.deactivate-account-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+
+  .deactivate-button {
+    background-color: red !important;
+    color: white;
+    border-radius: 50px;
+    padding: 8px 26px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 400px;
+    align-self: center;
+    margin-top: -14px;
+  }
+
+  @media (min-width: 600px) {
+    .deactivate-button {
+      width: 182px;
+    }
+  }
+}
+
+.fullname {
+  width: 145px !important;
+}

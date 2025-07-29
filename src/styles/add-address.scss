@@ -1,0 +1,60 @@
+@media (max-width: 640px) {
+  .textaddress {
+    font-size: 15px !important;
+  }
+  .css-zn0auy-MuiPaper-root-MuiCard-root {
+    padding: 0px;
+  }
+  .deletebtn {
+    display: none !important;
+  }
+  .addaddress_btn {
+    padding-bottom: 20px !important;
+    padding-right: 25px !important;
+  }
+  .accordian_text {
+    font-size: 13px !important;
+  }
+  .css-1o2jhdo .css-1ipmxcu-MuiButtonBase-root-MuiButton-root-MuiLoadingButton-root {
+    display: none;
+  }
+  .address_sidebar {
+    max-width: 250px !important;
+  }
+  .paper_space {
+    padding: 0px !important;
+  }
+  .addressbook_spacing {
+    padding-top: 0px !important;
+  }
+
+  .addressviewbtn {
+    margin-bottom: 20px !important;
+  }
+
+  // breadcrumbs css-----
+  .bcwidth {
+    // font-size: 14px !important;
+    width: max-content !important;
+  }
+  .bdtext {
+    font-size: 0.875rem !important;
+  }
+  .css-8atqhb {
+    overflow: overlay !important;
+  }
+  .breadcrumbs_spacing .MuiBreadcrumbs-ol {
+    flex-wrap: nowrap !important;
+  }
+}
+
+.addaddress_btn {
+  padding-bottom: 20px !important;
+  padding-right: 25px !important;
+}
+
+@media (min-width: 641px) {
+  .delbtn {
+    display: none !important;
+  }
+}

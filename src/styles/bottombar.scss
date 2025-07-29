@@ -1,0 +1,67 @@
+.usebottom_bar {
+  background-color: #D8F2E7;
+}
+
+.usebottom_bar .MuiToolbar-root {
+  min-height: 36px !important;
+  background-color: var(--mui-palette-background-default); /* Using CSS variable for theme background */
+  justify-content: space-between;
+  display: none; /* Hidden by default on small screens */
+  position: static;
+  z-index: 999;
+  width: 100%;
+  padding: 0px !important;
+  background-color: #D8F2E7;
+}
+
+.usebottom_bar .bottombar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 16px; /* Equivalent to MUI's `gap: 4` (4 * 4px = 16px) */
+  color: #101828;
+  font-weight: 500;
+}
+
+.usebottom_bar .bottombar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.usebottom_bar .bottombar .MuiTypography-root { /* Targeting Typography component */
+  font-weight: bold;
+}
+
+/* Media Queries */
+@media (min-width: 960px) { /* Equivalent to MUI's `md` breakpoint */
+  .usebottom_bar .MuiToolbar-root {
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .usebottom_bar .bottombar {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    padding: 15px 18px !important;
+  }
+  .usebottom_bar .bottombar a {
+    flex-shrink: 0 !important;
+  }
+  .usebottom_bar .bottombar .MuiTypography-root { /* Targeting Typography component */
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .usebottom_bar .MuiToolbar-root { /* This was targeting a specific class name `css-1526s8a-MuiToolbar-root` */
+    display: flex !important;
+  }
+  .usebottom_bar .css-1kwuo0x { /* This was targeting a specific class name `css-1kwuo0x` */
+    display: flex !important;
+  }
+}

@@ -1,0 +1,235 @@
+.order-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px !important;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+}
+
+.order-details {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.order-left,
+.order-right {
+  background-color: #fff;
+  padding: 20px;
+  height: 500px !important;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 280px;
+}
+
+.order-right {
+  background-color: #fff;
+  padding: 20px;
+  height: 380px !important;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 280px;
+}
+
+.order-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-top: 40px;
+  padding-left: 30px;
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.vitamin {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.vitamin h2 {
+  font-size: 1.25rem;
+}
+
+.number {
+  color: black !important;
+  padding-top: 17px;
+  font-weight: bold;
+}
+
+.para {
+  color: lightslategray !important;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.paragraph {
+  color: gray;
+}
+
+.borderline {
+  border-bottom: 1px solid gray;
+}
+
+.summary-row.total {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.digit {
+  color: rgb(25, 222, 31);
+  text-align: end;
+}
+
+.fees {
+  font-size: 16px;
+  color: black;
+  font-weight: normal;
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .order-details {
+    flex-direction: column;
+  }
+  .order-left,
+  .order-right {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .mainheading .order-title {
+    font-size: 24px;
+    text-align: start;
+  }
+  .vitamin h2 {
+    font-size: 18px;
+  }
+  .summary-row {
+    font-size: 14px;
+  }
+  .summary-row.total {
+    font-size: 24px;
+  }
+  .order-footer p {
+    visibility: hidden;
+  }
+  .order-footer .view-orders-btn {
+    margin-top: 10px;
+  }
+  .order-left-wrapper .title {
+    font-size: 10px;
+  }
+  /* Stack the buttons vertically */
+  .order-footer {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center align the buttons */
+    gap: 10px; /* Add spacing between buttons */
+  }
+  .continue-shopping-btn {
+    width: 100%; /* Full width of the container */
+    margin-top: 0; /* Remove the margin-top for better spacing */
+  }
+  .view-orders-btn {
+    width: 100%; /* Full width of the container */
+  }
+}
+.order-left-wrapper {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 500px;
+  overflow-y: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.order-left-wrapper .title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.order-left-wrapper .order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.order-left-wrapper .order-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.order-left-wrapper .order-card .order-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding: 5px;
+}
+.order-left-wrapper .order-card .order-info {
+  display: flex;
+  flex-direction: column;
+}
+.order-left-wrapper .order-card .order-info .order-number {
+  font-weight: bold;
+  font-size: 16px;
+}
+.order-left-wrapper .order-card .order-info .order-seller {
+  color: #888;
+  font-size: 12px;
+}
+.order-left-wrapper .order-card .order-info .order-date {
+  font-size: 14px;
+  color: #444;
+}
+.order-left-wrapper .order-footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.order-left-wrapper .order-footer p {
+  font-size: 13px;
+  padding-right: 20px;
+}
+.order-left-wrapper .order-footer .view-orders-btn {
+  padding: 5px 16px;
+  border: 1px solid #00c853;
+  color: #00c853;
+  background: #e9fbe8;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.continue-shopping-btn {
+  background-color: #49e80a; /* Match the color from your initial request */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%; /* Make it take the full width of the order-right section */
+  margin-top: 70px; /* Add some space above the button */
+}/*# sourceMappingURL=orderplaced.css.map */

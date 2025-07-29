@@ -1,0 +1,262 @@
+
+
+
+
+
+@media (max-width: 640px) {
+  .navbar_cart{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .css-1jcfcth .css-utt29s-MuiButtonBase-root-MuiButton-root {
+    display: none;
+  }
+  .css-hpv8be-MuiTypography-root {
+    display: none;
+  }
+
+  .css-8pmj1f-MuiGrid-root .css-ac42xv-MuiButtonBase-root-MuiIconButton-root,
+  .css-8pmj1f-MuiGrid-root .css-s8q772-MuiTypography-root {
+    display: none;
+  }
+  .css-14ukrja {
+    display: none !important;
+  }
+
+  .css-qthvdb {
+    display: none !important;
+  }
+  .cartmbl_image{
+    max-height: 60% !important;
+  }
+  .checkicon{
+    flex-shrink: inherit !important;
+  }
+  .form_spacing{
+    margin-left: 12px !important;
+  }
+  .paymentsummary_space{
+    margin-top: -96px !important;
+  }
+ 
+  
+}
+
+
+@media (min-width: 901px) { /* Use 901px to match useMediaQuery('(max-width:900px)') */
+  /* Ensure desktop-specific layout is visible */
+  .cart-item-card.desktop-specific-layout {
+    display: flex !important;
+  }
+
+  /* Ensure "Buy Now" is visible on desktop and displayed correctly */
+  .cart-item-card.desktop-specific-layout .MuiButton-contained {
+    display: block !important;
+    width: auto !important; /* Allow button to size itself based on content */
+    min-width: 80px; /* Ensure a minimum width to prevent truncation */
+    white-space: nowrap; /* Prevent text from wrapping */
+    box-sizing: border-box; /* Include padding/border in element's total width/height */
+  }
+
+  /* Ensure desktop-specific delete and wishlist texts/icons are visible */
+  .delete-button-grid-desktop,
+  .delivery-info-box-desktop {
+    display: flex !important;
+  }
+
+  /* Hide mobile-specific elements from desktop */
+  .cart-product-list-container .mobile-specific-layout {
+    display: none !important; /* Hide the entire mobile layout container */
+  }
+
+
+    /* Specifically target the quantity number for desktop if needed, though default should be fine */
+  .desktop-specific-layout .MuiTypography-root[sx*="mx: 1, fontSize: 18"] {
+      color: black; /* Ensure black text */
+      font-weight: normal; /* Default font weight */
+  }
+}
+
+
+@media (max-width: 900px) { /* Matches useMediaQuery('(max-width:900px)') */
+  /* Hide the desktop layout entirely on mobile/tablet */
+  .cart-item-card.desktop-specific-layout {
+    display: none !important;
+  }
+
+  /* Show mobile-specific layout */
+  .cart-item-card.mobile-specific-layout {
+    display: flex !important;
+    background-color: transparent !important; /* This background is for the card itself, not the buttons */
+    border: none !important;
+    box-shadow: none !important;
+    padding: 10px 15px !important;
+    align-items: center; /* NEW: Vertically center items in the main flex container */
+  }
+
+  /* Left column wrapper for image, quantity, stock. */
+  .cart-item-card.mobile-specific-layout > .MuiBox-root:first-of-type {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center horizontally for image, quantity, stock */
+      margin-right: 15px;
+      min-width: 100px; /* Fixed width for the image column */
+  }
+
+  /* Mobile Image Wrapper: critical for absolute positioning children */
+  .cart-product-list-container .product-image-wrapper-mobile {
+      width: 100px !important;
+      height: 100px !important;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid lightgray;
+      border-radius: 8px;
+      overflow: hidden;
+      flex-shrink: 0;
+  }
+
+  /* Checkbox inside the picture - positioning */
+  .cart-product-list-container .product-image-wrapper-mobile .MuiCheckbox-root {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      z-index: 2;
+      padding: 0;
+      border: 2px solid Gray;
+      border-radius: 0% !important;
+      width: 18px;
+      height: 18px;
+      
+  }
+
+  /* Mobile Quantity Controls - centered below image */
+  .cart-product-list-container .mobile-quantity-controls {
+      display: flex !important;
+      align-items: center;
+      justify-content: center; /* CENTER HORIZONTALLY */
+      margin-top: 8px;
+      width: 100%;
+  }
+
+  /* Style for the individual quantity buttons for mobile */
+  /* These properties are now solely driven by the `sx` prop in JSX */
+  .cart-product-list-container .mobile-quantity-controls .MuiIconButton-root {
+      width: 20px !important;
+      height: 20px !important;
+      min-width: 20px !important;
+      padding: 0; /* Remove default padding from IconButton */
+      flex-shrink: 0;
+      /* All other styling (background-color, color, border-radius, border)
+         is now handled by the `sx` prop in `CartProductList.jsx` */
+  }
+
+  /* Quantity number in between - mobile */
+  .cart-product-list-container .mobile-quantity-controls .MuiTypography-root {
+      font-size: 12px;
+      margin: 0 8px;
+      min-width: 15px;
+      text-align: center;
+      font-weight: bold;
+      color: black; /* Ensure the number is black */
+  }
+
+  /* Mobile Stock Status - explicitly shown and centered */
+  .cart-product-list-container .mobile-specific-layout .MuiTypography-root[style*="color: green"],
+  .cart-product-list-container .mobile-specific-layout .MuiTypography-root:contains("Stock available") {
+      display: block !important;
+      margin-top: 4px !important;
+      text-align: center !important; /* CENTER THE TEXT */
+      width: 100%;
+  }
+
+  /* Hide the "Buy Now" button on mobile */
+  .cart-product-list-container .MuiButton-contained {
+    display: none !important;
+  }
+
+  /* Hide the mobile delete icon completely (as it's not present in your provided screenshot) */
+  .cart-product-list-container .mobile-delete-icon {
+    display: none !important;
+  }
+
+  /* Hide desktop-specific delete and wishlist texts/icons on mobile */
+  .delete-button-grid-desktop,
+  .delivery-info-box-desktop {
+    display: none !important;
+  }
+
+  /* Right side content alignment and font size adjustments */
+  .cart-item-card.mobile-specific-layout > .MuiBox-root:nth-child(2) {
+    display: flex;
+    flex-direction: column; /* Ensure elements stack vertically */
+    justify-content: center; /* Vertically center the content within this box */
+    min-height: 100px; /* Match the image height for better alignment context */
+    padding-top: 0 !important; /* Reset default padding if any */
+    padding-bottom: 0 !important; /* Reset default padding if any */
+
+  }
+
+  /* Product Name Font Size on Mobile */
+  .cart-item-card.mobile-specific-layout > .MuiBox-root:nth-child(2) > .MuiBox-root:first-of-type > .MuiTypography-root:first-child {
+    font-size: 18px; /* Increase product name font size */
+    font-weight: bold; /* Ensure it remains bold */
+  }
+
+  /* Price Font Size on Mobile */
+  /* This targets the Typography containing the discounted price (and potentially actual price if present) */
+  .cart-item-card.mobile-specific-layout > .MuiBox-root:nth-child(2) > .MuiTypography-root[font-weight="bold"] {
+    font-size: 18px; /* Increase price font size */
+    font-weight: bold; /* Ensure it remains bold */
+    margin-top: 4px; /* Add a little space below the seller info */
+  }
+
+  /* General typography adjustments for mobile to prevent extra y-axis space */
+  .cart-product-list-container .mobile-specific-layout .MuiTypography-root {
+      margin-top: 0;
+      margin-bottom: 0;
+  }
+
+  /* More specific adjustments for mobile typography spacing if needed */
+  .cart-product-list-container .mobile-specific-layout .MuiTypography-fontWeightBold {
+      margin-top: 4px !important;
+  }
+}
+
+
+
+
+
+
+
+//Product List Container Styles
+.cart-product-list-container {
+  width: 100%;
+  max-width: 1200px; /* Max width for the whole list on larger screens */
+  margin: 0 auto; /* Center the list */
+  padding: 0; /* Remove padding from the main container */
+  box-sizing: border-box; /* Include padding in element's total width/height */
+}
+
+/* Ensure the specific Typography for the item count within CartProductList is always visible */
+.cart-product-list-container .cart-header-item-count {
+  display: block !important; /* Ensure visibility on all screen sizes */
+}
+
+body > .MuiTypography-root:contains("( items)"),
+body > .MuiTypography-root:contains("( item)"),
+.some-other-parent-container > .MuiTypography-root:contains("( items)"),
+.some-other-parent-container > .MuiTypography-root:contains("( item)")
+{
+  display: none !important;
+}
+
+
+
+
+.payment_summary{
+  margin-top: 83px  !important;
+}
+
+

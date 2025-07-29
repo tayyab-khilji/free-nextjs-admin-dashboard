@@ -1,0 +1,73 @@
+.text {
+  color: #003c26;
+  font-weight: 800;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.guide-container {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  font-family: "Arial", sans-serif;
+  color: #1e3a34;
+}
+
+.walkthrough-btn {
+  background-color: #65d235;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.section-title {
+  color: #134e35;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.steps-list {
+  margin-bottom: 20px;
+}
+
+.steps-list li {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.steps-list p {
+  font-size: 14px;
+}
+
+.steps-list li strong {
+  display: block;
+  color: #003c26;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.help-title {
+  color: #134e35;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.help-text {
+  font-size: 14px;
+  color: #333;
+}
+
+.signof {
+  margin-top: 20px;
+}/*# sourceMappingURL=sellerapproved.css.map */

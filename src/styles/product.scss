@@ -1,0 +1,91 @@
+@media (max-width: 640px) {
+  .custom {
+    padding-left: 10px !important;
+    font-size: 15px !important;
+  }
+  .magnify_roller {
+    display: none !important;
+  }
+  .product_btncard {
+    order: -1;
+  }
+  .product_price {
+    display: flex;
+    align-items: center;
+  }
+
+  .Customer_Reviews {
+    display: flex;
+    gap: 14px;
+    padding-left: 10px;
+  }
+  .product_store {
+    display: flex;
+  }
+  .rating {
+    display: none !important;
+  }
+  .productname_order {
+    order: -1;
+  }
+  .brandname {
+    font-size: 0.875rem !important;
+    padding-left: 4px !important;
+  }
+  .reviews_direction {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .keyingredient {
+    display: none !important  ;
+  }
+  .review_btn {
+    display: none !important;
+  }
+  .review_flex {
+    display: flex !important;
+    gap: 22px !important;
+  }
+  .creview {
+    font-size: 11px !important;
+  }
+  .stars {
+    font-size: 18px !important;
+    margin-left: 30px !important;
+  }
+  .heart_btn {
+    // margin-right: 28px !important;
+    // margin-top: -20px !important;
+    // padding-right: 40px !important;
+    margin-right: 38px !important;
+    margin-top: 10px !important;
+  }
+  .imgcard_space {
+    padding-left: 0px !important;
+  }
+  .nameprice {
+    padding-left: 22px !important;
+    padding: 0px !important;
+  }
+
+  .pricee {
+    padding: 3px 10px !important;
+    font-size: 8px !important;
+  }
+  .product_para {
+    // font-family: 'Inter', sans-serif !important;
+    font-size: 1.1rem !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    letter-spacing: 0 !important;
+    word-break: break-word !important;
+  }
+}
+
+@media (min-width: 320px) {
+  .css-1q0hlfy .text-price .old-price {
+    display: block !important;
+  }
+}

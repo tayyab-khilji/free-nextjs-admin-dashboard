@@ -1,0 +1,21 @@
+@media (max-width: 640px) {
+  .css-1jcfcth .css-utt29s-MuiButtonBase-root-MuiButton-root {
+    display: none;
+  }
+  .css-hpv8be-MuiTypography-root {
+    display: none;
+  }
+  .css-8pmj1f-MuiGrid-root .css-ac42xv-MuiButtonBase-root-MuiIconButton-root,
+  .css-8pmj1f-MuiGrid-root .css-s8q772-MuiTypography-root {
+    display: none;
+  }
+  .css-14ukrja {
+    display: none !important;
+  }
+  .css-qthvdb {
+    display: none !important;
+  }
+}
+.css-1lj5egr-MuiGrid-root .css-i6n1g1-MuiPaper-root-MuiCard-root {
+  margin-top: 100px;
+}/*# sourceMappingURL=cart.css.map */

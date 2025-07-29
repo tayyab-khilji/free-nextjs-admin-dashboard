@@ -1,0 +1,375 @@
+.marketplace-container {
+  background-color: #ebf9f3;
+  padding: 20px;
+  height: 450px;
+}
+
+.marketplace-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-section h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: justify;
+}
+
+.signup-button {
+  background-color: #65d235;
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 150px;
+}
+
+.image-section img {
+  width: 570px;
+  height: 370px;
+  margin-left: 45px;
+  margin-top: 40px;
+}
+/* WhySellSection.css */
+.why-sell-container {
+  margin-top: 60px;
+  background-color: white;
+  padding: 40px 0;
+}
+
+.why-sell-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.why-sell-features {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.feature-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #65d235;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.feature-title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+.feature-text {
+  font-size: 11px;
+  color: #666;
+  margin-left: 55px;
+}
+
+/* HowItWorksSection.css */
+.how-it-works-container {
+  text-align: center;
+  background-color: white;
+  // padding: 50px 0;
+  margin: auto;
+}
+
+.how-it-works-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.how-it-works-container .how-it-works-steps {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1080px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.step {
+  text-align: left;
+  max-width: 200px;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.step-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #cbd5e0;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.step-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.step-text {
+  font-size: 11px;
+  color: #666;
+  padding-left: 55px;
+}
+
+.sign-up-button {
+  background-color: #65d235;
+  color: #fff;
+  padding: 10px 30px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+  margin-top: 50px;
+  width: 140px;
+}
+.faq-container {
+  padding: 20px;
+  background-color: white;
+  width: 1050px;
+  margin: auto;
+}
+
+.faq-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.faq-question {
+  cursor: pointer;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+
+.faq-icon.rotated {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  padding: 2px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+@media (max-width: 640px) {
+  /* Keep existing mobile styles for marketplace-content, text-section, image-section, faq */
+  .marketplace-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature-title br {
+    display: none; /* As discussed, this hides the <br/> but doesn't change text flow without JS/HTML manipulation */
+  }
+  .step-title br {
+    display: none;
+  }
+  .text-section br{
+    display: none;
+  }
+  .text-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-section h1 {
+    margin-top: 20px;
+    line-height: 1;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  .image-section img {
+    width: 356px;
+    height: 265px;
+    margin-left: 0px;
+  }
+  .why-sell-features {
+    display: flex;
+    flex-direction: column; /* Stacks the feature items vertically */
+    align-items: center; /* Centers the stacked feature items */
+    padding: 0 20px; /* Add horizontal padding */
+    gap: 40px; /* Increased gap between features for better separation when stacked */
+  }
+  .why-sell-title {
+    font-size: 20px;
+    padding: 0 20px;
+    font-weight: 900;
+
+  }
+
+  /* --- Specific changes for feature stacking on mobile --- */
+  .feature-item {
+    width: 100%; /* Take full width of its parent */
+    max-width: 300px; /* Limit max width for readability */
+    text-align: center; /* Center align all content within the feature item */
+    display: flex; /* Make the feature item itself a flex container */
+    flex-direction: column; /* Stack its children (icon, title, text) vertically */
+    align-items: center; /* Center children horizontally */
+  }
+
+  .feature-header {
+    display: flex; /* Keep it as flex for icon and title */
+    flex-direction: column; /* Stack icon and title vertically within feature-header */
+    align-items: center; /* Center icon and title horizontally */
+    margin-bottom: 10px; /* Add some space below the header before the text */
+  }
+
+  .feature-icon {
+    width: 40px; /* Keep original icon size or adjust as needed */
+    height: 40px;
+    font-size: 18px;
+    margin-right: 0; /* Remove right margin if icon is above title */
+    margin-bottom: 10px; /* Add margin below icon to separate from title */
+  }
+
+  .feature-title {
+    font-size: 18px; /* Adjust as per your preference, closer to original but scaled */
+    line-height: 1.2; /* Adjust line height for better spacing */
+    margin-bottom: 0; /* Remove bottom margin if feature-header has margin */
+    text-align: center;
+    font-weight: 900;
+
+  }
+
+  .feature-text {
+    font-size: 14px; /* Adjust paragraph font size */
+    color: #666;
+    margin-left: 0; /* Remove left margin as it's not needed for stacking */
+    text-align: center; /* Ensure paragraph text is centered */
+    padding: 0 10px; /* Add some horizontal padding to the text if it's too wide */
+  }
+  /* --- End of specific changes --- */
+
+  /* --- Specific changes for How It Works section on mobile --- */
+  .how-it-works-container {
+    padding: 20px 0; /* Add some padding to the container */
+  }
+  .how-it-works-title {
+    font-size: 20px; /* Adjust title font size for mobile */
+    padding: 0 20px; /* Add padding to title */
+    margin-bottom: 30px; /* Adjust margin */
+    font-weight: 900;
+
+  }
+  .how-it-works-container .how-it-works-steps {
+    display: flex;
+    flex-direction: column; /* Stack the steps vertically */
+    align-items: center; /* Center the stacked steps */
+    gap: 40px; /* Add space between each step */
+  }
+
+  .step {
+    width: 100%; /* Make each step take full width */
+    max-width: 300px; /* Limit max width for readability */
+    text-align: center; /* Center align all content within the step */
+    display: flex; /* Make the step itself a flex container */
+    flex-direction: column; /* Stack its children (step-header, step-text) vertically */
+    align-items: center; /* Center children horizontally */
+  }
+
+  .step-header {
+    display: flex; /* Keep it as flex for icon and title */
+    flex-direction: column; /* Stack icon and title vertically within step-header */
+    align-items: center; /* Center icon and title horizontally */
+    margin-bottom: 10px; /* Add some space below the header before the text */
+  }
+
+  .step-icon {
+    width: 40px; /* Keep original icon size or adjust as needed */
+    height: 40px;
+    font-size: 18px;
+    margin-right: 0; /* Remove right margin if icon is above title */
+    margin-bottom: 10px; /* Add margin below icon to separate from title */
+  }
+
+  .step-title {
+    font-size: 18px; /* Adjust title font size */
+    line-height: 1.2; /* Adjust line height for better spacing */
+    margin-bottom: 0; /* Remove bottom margin if step-header has margin */
+    text-align: center;
+    font-weight: 900;
+
+  }
+
+  .step-text {
+    font-size: 14px; /* Adjust paragraph font size */
+    color: #666;
+    margin-left: 0; /* Remove left margin as it's not needed for stacking */
+    text-align: center; /* Ensure paragraph text is centered */
+    padding: 0 10px; /* Add some horizontal padding to the text if it's too wide */
+  }
+  .sign-up-button {
+    margin-top: 40px; /* Adjust margin for button below steps */
+    width: 120px; /* Adjust button width for mobile */
+    padding: 8px 20px; /* Adjust button padding */
+  }
+  /* --- End of specific changes for How It Works section --- */
+
+  .faq-container {
+    width: 100%;
+    padding: 20px; /* Ensure padding on mobile */
+  }
+  .faq-title {
+    font-size: 24px; /* Adjust FAQ title size */
+    font-weight: 900;
+
+  }
+  .faq-question {
+    font-size: 13px; /* Adjust FAQ question font size */
+  }
+  .faq-answer {
+    font-size: 13px; /* Adjust FAQ answer font size */
+  }
+}
