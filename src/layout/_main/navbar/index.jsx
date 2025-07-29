@@ -472,7 +472,7 @@ export default function Navbar() {
             {/* Example Drawer Items - you can customize these */}
             <ListItem button onClick={() => router.push('/')}>
               {/* <ListItemText primary="Home" /> */}
-              <img style={{ width: '154px', height: '65px' }} src="/images/hlogo.png" alt="" />
+              <img style={{ width: '154px', height: '65px' }} src="/images/logo.png" alt="" />
             </ListItem>
 
             {/* menuburgar sidebar icons------- */}
