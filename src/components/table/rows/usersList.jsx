@@ -6,6 +6,8 @@ import { useRouter } from 'next-nprogress-bar';
 import { styled } from '@mui/material/styles';
 import { Box, TableRow, Skeleton, TableCell, Typography, Stack, IconButton, Avatar, Tooltip } from '@mui/material';
 
+import Label from 'src/components/label';
+
 // utils
 import { fDateShort } from 'src/utils/formatTime';
 
@@ -15,6 +17,8 @@ import { LuUser2 } from 'react-icons/lu';
 import { FaUserCheck } from 'react-icons/fa6';
 
 // component
+import Image from 'next/image';
+
 import BlurImage from 'src/components/blurImage';
 import ROLES from 'src/utils/userRoles';
 
@@ -25,7 +29,7 @@ UserRow.propTypes = {
     cover: PropTypes.shape({
       url: PropTypes.string.isRequired
     }),
-    firstName: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     phone: PropTypes.string.isRequired,
     totalOrders: PropTypes.number.isRequired,
@@ -58,60 +62,59 @@ export default function UserRow({ isLoading, row, setId }) {
         >
           {isLoading ? (
             <Skeleton variant="circular" width={40} height={40} />
-          ) : row?.cover?.url ? (
-            <ThumbImgStyle>
-              <BlurImage priority fill alt={row?.firstName + ' thumbnail'} src={row?.cover?.url} objectFit="cover" />
-            </ThumbImgStyle>
           ) : (
-            <Avatar color="primary" sx={{ mr: 1 }}>
-              {row?.firstName.slice(0, 1)}
-            </Avatar>
+            <Typography variant="body2" noWrap sx={{ textTransform: 'capitalize' }}>
+              {isLoading ? <Skeleton variant="text" width={120} sx={{ ml: 1 }} /> : row?.name}
+            </Typography>
           )}
-          <Typography variant="subtitle2" noWrap sx={{ textTransform: 'capitalize' }}>
-            {isLoading ? <Skeleton variant="text" width={120} sx={{ ml: 1 }} /> : row?.firstName}
-          </Typography>
+
         </Box>
       </TableCell>
       <TableCell style={{ minWidth: 160 }}>{isLoading ? <Skeleton variant="text" /> : row?.email}</TableCell>
-      <TableCell style={{ minWidth: 80 }}>{isLoading ? <Skeleton variant="text" /> : row?.phone}</TableCell>
-      <TableCell style={{ minWidth: 40 }}>{isLoading ? <Skeleton variant="text" /> : row?.totalOrders || 0}</TableCell>
-      <TableCell style={{ minWidth: 40, textTransform: 'capitalize' }}>
-        {isLoading ? <Skeleton variant="text" /> : row.role}
+      <TableCell>
+        {isLoading ? (
+          <Skeleton variant="text" />
+        ) : (
+          <Label variant={'filled'} >
+            {row?.plan || 'N/A'}
+          </Label>
+
+        )}
       </TableCell>
+
       <TableCell style={{ minWidth: 40 }}>
         {isLoading ? <Skeleton variant="text" /> : fDateShort(row.createdAt, enUS)}
       </TableCell>
       <TableCell>
+        {isLoading ? (
+          <Skeleton variant="text" />
+        ) : (
+          <Label
+            variant={'filled'}
+            color={
+              (row?.status === 'rejected' && 'error') ||
+              (row?.status === 'pending' && 'warning') ||
+              (row?.status === 'active' && 'success') ||
+              'error'
+            }
+          >
+            {(row?.status === 'rejected' && 'Rejected') ||
+              (row?.status === 'pending' && 'Pending') ||
+              (row?.status === 'active' && 'Active') ||
+              row?.status}
+          </Label>
+        )}
+      </TableCell>
+
+      <TableCell>
         <Stack direction="row" justifyContent="flex-end" gap={1}>
           {isLoading ? (
-            <>
-              <Skeleton variant="circular" width={40} height={40} />
-              <Skeleton variant="circular" width={40} height={40} />
-            </>
-          ) : (
-            <>
-              {row.role === ROLES.SUPER_ADMIN ? (
-                <IconButton disabled onClick={() => router.push(`/admin/users/${row?._id}`)}>
-                  <FaUserCheck />
-                </IconButton>
-              ) : (
-                <Tooltip title={row.role === ROLES.ADMIN ? 'Remove an admin' : 'Make an admin'}>
-                  <IconButton
-                    onClick={() => {
-                      setId(row._id);
-                    }}
-                  >
-                    {row.role === ROLES.ADMIN ? <FaUserCheck /> : <LuUser2 />}
-                  </IconButton>
-                </Tooltip>
-              )}
+            <Skeleton variant="text" />
 
-              <Tooltip title="Preview">
-                <IconButton onClick={() => router.push(`/admin/users/${row?._id}`)}>
-                  <FiEye />
-                </IconButton>
-              </Tooltip>
-            </>
+          ) : (
+            <Typography variant="body2" noWrap sx={{ textTransform: 'capitalize' }}>
+              View
+            </Typography>
           )}
         </Stack>
       </TableCell>

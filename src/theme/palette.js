@@ -93,6 +93,7 @@ const COMMON = {
   warning: { ...WARNING },
   error: { ...ERROR },
   grey: GREY,
+  greyBG: '#e8ecf5',
   gradients: GRADIENTS,
 
   chart: CHART_COLORS,

@@ -25,8 +25,8 @@ const menuItems = [
   },
   {
     icon: <FiDatabase />,
-    name: 'Other 1',
-    link: '/other1'
+    name: 'Users',
+    link: '/users'
   },
   {
     icon: <FiBarChart />,

@@ -176,8 +176,8 @@ export const updateOrderStatus = async ({ id, ...payload }) => {
   const { data } = await http.put(`/admin/orders/${id}`, payload);
   return data;
 };
-export const getUserByAdminsByAdmin = async (page, search) => {
-  const { data: response } = await http.get(`/admin/users?search=${search}&page=${page}`);
+export const getAllUsers = async (page, search) => {
+  const { data: response } = await http.get(`/all/users?search=${search}&page=${page}`);
   return response;
 };
 export const getUserByAdmin = async (id) => {

@@ -24,7 +24,7 @@ const nextConfig = {
     NEXT_PUBLIC_GOOGLE_CLIENT_SEC: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_SEC
   },
   images: {
-    domains: ['ai-chat.vercel.app"', 'res.cloudinary.com']
+    domains: ['ai-chat.vercel.app"', 'res.cloudinary.com', 'images.unsplash.com']
   }
 };
 
