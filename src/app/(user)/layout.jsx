@@ -4,8 +4,8 @@
 import React, { useEffect } from 'react';
 import Script from 'next/script';
 import TagManager from 'react-gtm-module';
-import UserLayoutWrapper from './UserLayoutWrapper';
 import FcmTokenComp from 'src/components/fcm/firebaseForeground';
+import Box from '@mui/material/Box';
 
 
 
@@ -15,11 +15,16 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body>
-        <UserLayoutWrapper>
+        <Box>
           <FcmTokenComp />
           {children}
-        </UserLayoutWrapper>
+        </Box>
       </body>
     </html>
   );
 }
+
+
+// // layout
+// import VendorLayout from 'src/layout/_vendor';
+//         <VendorLayout></VendorLayout>

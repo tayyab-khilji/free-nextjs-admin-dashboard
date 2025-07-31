@@ -9,6 +9,7 @@ import {
   useTheme,
   useMediaQuery
 } from '@mui/material';
+import LineChart from 'src/utils/linechart';
 
 import PropTypes from 'prop-types';
 import { BsBoxSeam } from 'react-icons/bs';
@@ -34,17 +35,31 @@ export default function DashboardStats({ data: dashboardStats, isLoading: dataLo
   const generateStats = () => {
     return [
       {
-        title: 'Total Users',
-        value: 15
+        title: 'Chat Interactions',
+        value: 15,
+        change: formatChange(15, 45),
+        isPositive: 15 >= 45
+        //  change: formatChange(data.totalOrders.thisMonth, data.totalOrders.lastMonth),
+        // isPositive: data.totalOrders.thisMonth >= data.totalOrders.lastMonth
       },
       {
-        title: 'Total Tokens',
-        value: `225`
+        title: 'Users',
+        value: `225`,
+        change: formatChange(15, 45),
+        isPositive: 15 >= 45
 
       },
       {
-        title: 'Total Others',
-        value: 112
+        title: 'Tokens Used',
+        value: '12.5%',
+        change: formatChange(15, 5),
+        isPositive: 15 >= 45
+      },
+      {
+        title: 'Others',
+        value: 112,
+        change: formatChange(830, 435),
+        isPositive: 830 >= 435
       }
     ];
   };
@@ -86,8 +101,8 @@ export default function DashboardStats({ data: dashboardStats, isLoading: dataLo
 
   return (
     <Box sx={{ my: 2, width: '100%' }}>
-
       <Grid container spacing={4}>
+        {/* Stats Cards */}
         <Grid item xs={12}>
           <Grid container spacing={2}>
             {dataLoading ? (
@@ -104,7 +119,7 @@ export default function DashboardStats({ data: dashboardStats, isLoading: dataLo
               </>
             ) : (
               stats?.map((stat, index) => (
-                <Grid item xs={12} sm={4} md={4} key={index}>
+                <Grid item xs={12} sm={3} md={3} key={index}>
                   <Card
                     sx={{
                       display: 'flex',
@@ -119,27 +134,52 @@ export default function DashboardStats({ data: dashboardStats, isLoading: dataLo
                     {/* Top Section with Data */}
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <Box>
+                        <Typography variant="body1" color="text.secondary">
+                          {stat.title}
+                        </Typography>
                         <Typography variant="h4" fontWeight="bold">
                           {stat.value}
                         </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          {stat.title}
-                        </Typography>
                       </Box>
 
-                      <Box
+                      {/* <Box
                         sx={{
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
                           width: 64,
                           height: 64,
-                          backgroundColor: '#f3f3ff',
+                          backgroundColor: '#e0f7fa',
                           borderRadius: '50%'
                         }}
                       >
-                        {renderIcon(index)} {/* Pass index to renderIcon */}
+                        {renderIcon(index)}
+                      </Box> */}
+                    </Box>
+
+
+                    {/* Chart Section */}
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                      <Box
+                        sx={{
+                          display: 'flex',
+                          height: 28,
+                          borderRadius: 16,
+                          alignItems: 'center',
+                          px: 0.7
+                        }}
+                      >
+
+                        <Typography
+                          variant="body2"
+                          sx={{ color: stat.isPositive ? 'green' : 'red', fontWeight: 'bold' }}
+                        >
+                          {`${stat.change}`}
+                        </Typography>
+
                       </Box>
+
+                      <LineChart isGreen={stat.isPositive} />
                     </Box>
 
                   </Card>

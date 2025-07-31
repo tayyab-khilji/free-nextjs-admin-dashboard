@@ -23,57 +23,6 @@ import { toast } from 'react-hot-toast';
 // dynamic components
 const Pagination = dynamic(() => import('src/components/pagination'));
 
-// const notifications = [
-//     {
-//         id: 1,
-//         title: 'New Order Placed!',
-//         message: 'Thanks for your order #[OrderID]! We’re preparing it now.',
-//         createdAt: new Date(),
-//         type: 'new_order',
-//         isRead: false,
-//     },
-//     {
-//         id: 2,
-//         title: 'Order Canceled (by you)!',
-//         message: 'You canceled order #[OrderID]. Your refund will be processed shortly.',
-//         createdAt: new Date(new Date().getTime() - 10 * 60000), // 10 min ago
-//         type: 'order_cancelled',
-//         isRead: false,
-//     },
-//     {
-//         id: 3,
-//         title: 'Review & Feedback!',
-//         message: 'Rate your recent order #[OrderID] and help other halal shoppers.',
-//         createdAt: new Date(new Date().setDate(new Date().getDate() - 1)), // Yesterday
-//         type: 'review',
-//         isRead: true,
-//     },
-//     {
-//         id: 4,
-//         title: 'Cart Reminders!',
-//         message: 'You left some halal goodies in your cart. Complete your order now!',
-//         createdAt: new Date(new Date().setDate(new Date().getDate() - 1)), // Yesterday
-//         type: 'cart_reminder',
-//         isRead: true,
-//     },
-//     {
-//         id: 5,
-//         title: 'Account & Security!',
-//         message: 'Password changed successfully. You’re all set!',
-//         createdAt: new Date(new Date().setDate(new Date().getDate() - 5)), // This month
-//         type: 'BuyHalalgoods',
-//         isRead: true,
-//     },
-//     {
-//         id: 5,
-//         title: 'Account & Security!',
-//         message: 'Password changed successfully. You’re all set!',
-//         createdAt: new Date(new Date().setMonth(new Date().getMonth() - 3)), // Three months ago
-//         type: 'BuyHalalgoods',
-//         isRead: true,
-//     },
-// ];
-
 
 // Complete list of notification types from your enum
 const NotificationTypes = {
@@ -425,7 +374,7 @@ function NotificationsView() {
                                             sx={{
                                                 borderRadius: '12px',
                                                 backgroundColor: (notif.type === NotificationTypes.ORDER.CANCELLED_BY_SELLER || notif.type === NotificationTypes.ORDER.CANCELLED_BY_USER) ? '#FECDCA'
-                                                    : notif.type === 'BuyHalalgoods' ? '#65D235' :
+                                                    : notif.type === 'Chatpliance' ? '#65D235' :
                                                         (notif.type === NotificationTypes.REVIEW.ORDER_REVIEW_PROMPT || notif.type === NotificationTypes.REVIEW.PRODUCT_REVIEW_PROMPT ||
                                                             notif.type === NotificationTypes.ORDER.DELIVERED || notif.type === NotificationTypes.ORDER.PLACED ||
                                                             notif.type === NotificationTypes.ORDER.RECEIVED || notif.type === NotificationTypes.ORDER.SHIPPED ||

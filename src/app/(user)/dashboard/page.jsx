@@ -5,6 +5,9 @@ import { Container } from '@mui/material';
 import AuthGuard from 'src/guards/auth';
 import DashboardPage from 'src/components/_main/dashboard/Dashboard';
 
+// layout
+import VendorLayout from 'src/layout/_vendor';
+
 // Meta information
 export const metadata = {
   title: 'Login or Sign In – AI Chat',
@@ -15,13 +18,16 @@ export const metadata = {
     'AI, AI-Chat, Chat, chat'
 };
 
+
 export default function page() {
   return (
     <>
-      {/* <AuthGuard> */}
-      <Container className='dashboard-container' maxWidth="100%" sx={{ backgroundColor: '#f4f5f7' }}>
-        <DashboardPage />
-      </Container>
+      <VendorLayout>
+        {/* <AuthGuard> */}
+        <Container fullWidth className='dashboard-container' maxWidth="100%" sx={{ backgroundColor: '#f4f5f7' }}>
+          <DashboardPage />
+        </Container>
+      </VendorLayout>
       {/* </AuthGuard> */}
     </>
   );

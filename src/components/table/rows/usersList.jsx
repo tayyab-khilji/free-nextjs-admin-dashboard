@@ -75,7 +75,14 @@ export default function UserRow({ isLoading, row, setId }) {
         {isLoading ? (
           <Skeleton variant="text" />
         ) : (
-          <Label variant={'filled'} >
+          <Label variant={'filled'} sx={{
+            width: 100, // or '100px'
+            minWidth: 100, // prevents shrinking
+            textAlign: 'center', // optional: centers the text
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap'
+          }} >
             {row?.plan || 'N/A'}
           </Label>
 

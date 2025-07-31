@@ -23,9 +23,8 @@ import MuiDrawer from '@mui/material/Drawer';
 // icons
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import { LuLayoutDashboard } from 'react-icons/lu';
-import { BsShop } from 'react-icons/bs';
-import { BsCart3 } from 'react-icons/bs';
-import { HiOutlineShoppingBag } from 'react-icons/hi2';
+import { FaRegUser } from "react-icons/fa6";
+import { PiChatDots } from "react-icons/pi";
 import { IoSettingsOutline } from 'react-icons/io5';
 
 // components
@@ -43,28 +42,21 @@ export const navlinks = [
 
   {
     id: 2,
-    title: 'Products',
-    slug: 'products',
-    icon: <BsShop />,
+    title: 'Chat Bot',
+    slug: 'chat',
+    icon: <PiChatDots />,
+    isSearch: true
+  },
+  {
+    id: 3,
+    title: 'Users',
+    slug: 'users',
+    icon: <FaRegUser />,
     isSearch: true
   },
 
   {
-    id: 3,
-    title: 'Orders',
-    slug: 'orders',
-    icon: <BsCart3 />,
-    isSearch: true
-  },
-  {
     id: 4,
-    title: 'Shop',
-    slug: 'shop',
-    icon: <HiOutlineShoppingBag />,
-    isSearch: false
-  },
-  {
-    id: 5,
     title: 'Settings',
     slug: 'settings',
     icon: <IoSettingsOutline />,
@@ -212,22 +204,22 @@ export default function Sidebar({ handleDrawerClose, handleDrawerOpen, open }) {
                   display: 'block',
                   borderRadius: '8px',
                   border: `1px solid transparent`,
-                  ...(active === '/vendor/' + item.slug &&
+                  ...(active === item.slug &&
                     initial && {
-                      bgcolor: (theme) => alpha(theme.palette.primary.main, 0.2),
-                      border: (theme) => `1px solid ${theme.palette.primary.main}`,
-                      color: theme.palette.primary.main,
-                      '& .MuiTypography-root': {
-                        fontWeight: 600
-                      }
-                    })
+                    bgcolor: (theme) => alpha(theme.palette.primary.main, 0.2),
+                    border: (theme) => `1px solid ${theme.palette.primary.main}`,
+                    color: theme.palette.primary.main,
+                    '& .MuiTypography-root': {
+                      fontWeight: 600
+                    }
+                  })
                 }}
               >
                 <Tooltip title={open ? '' : item.title} placement="left" arrow leaveDelay={200}>
                   <ListItemButton
                     onClick={() => {
                       setActive(item.slug);
-                      router.push('/vendor/' + item.slug);
+                      router.push(item.slug);
                       isMobile && handleDrawerClose();
                     }}
                     sx={{

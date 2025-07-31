@@ -12,9 +12,9 @@ import BreadcrumbsSkeleton from 'src/components/_main/skeletons/products/breadcr
 
 // Meta information
 export const metadata = {
-  title: 'Change Password | BuyHalal - Update Your Account Password Securely',
-  applicationName: 'BuyHalal',
-  authors: 'BuyHalal'
+  title: 'Change Password | Chatpliance - Update Your Account Password Securely',
+  applicationName: 'Chatpliance',
+  authors: 'Chatpliance'
 };
 
 // components

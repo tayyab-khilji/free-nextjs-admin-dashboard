@@ -3,6 +3,10 @@ import React, { useEffect } from 'react';
 
 // components
 import StatsCards from 'src/components/_main/dashboard/analyticsStats';
+import DashboardGraph from 'src/components/_main/dashboard/dashboardGraph';
+import DashboardUsers from 'src/components/_main/dashboard/dashboardUsers';
+
+
 // api
 import * as api from 'src/services';
 import { Box, Container, Grid } from '@mui/material';
@@ -33,12 +37,15 @@ export default function VendorDashboard() {
                 <Box>
                     <StatsCards isLoading={false} data={null} />
 
-                    {/* <Grid className='dashboard_column' container spacing={2}>
+                    <Grid className='dashboard_column' container spacing={2}>
                         <Grid className='firstcol' item xs={12}>
+                            <DashboardGraph />
+
+                            <DashboardUsers />
 
                         </Grid>
 
-                    </Grid> */}
+                    </Grid>
 
                 </Box>
             </Container>

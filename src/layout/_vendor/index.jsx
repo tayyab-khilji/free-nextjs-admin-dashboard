@@ -21,7 +21,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 export default function MiniDrawer({ children }) {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(true);
   const dispatch = useDispatch();
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -35,13 +35,13 @@ export default function MiniDrawer({ children }) {
 
   return (
     <Box sx={{ display: 'flex' }}>
-      <DashboardAppbar open={open} handleDrawerOpen={handleDrawerOpen} handleDrawerClose={handleDrawerClose} />
+      {/* <DashboardAppbar open={open} handleDrawerOpen={handleDrawerOpen} handleDrawerClose={handleDrawerClose} /> */}
 
       <DashboardSidebar handleDrawerOpen={handleDrawerOpen} handleDrawerClose={handleDrawerClose} open={open} />
-      <Box component="main" sx={{ flexGrow: 1, p: 3, position: 'relative', overflow: 'hidden' }}>
-        <DrawerHeader />
-        {children}
-      </Box>
+      {/* <Box component="main" sx={{ flexGrow: 1, p: 3, position: 'relative', overflow: 'hidden' }}> */}
+      <DrawerHeader />
+      {children}
+      {/* </Box> */}
     </Box>
   );
 }
