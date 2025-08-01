@@ -1,9 +1,12 @@
-// src/app/admin/products/page.js
 import React from 'react';
+
 import { Container } from '@mui/material';
 // guard
 import AuthGuard from 'src/guards/auth';
 import UserList from 'src/components/_main/users/userList'; // New component
+
+// layout
+import MainLayout from 'src/layout/_main';
 
 // Meta information
 export const metadata = {
@@ -16,16 +19,16 @@ export const metadata = {
 };
 
 
-export default function AdminProducts() {
+export default function page() {
   return (
     <>
-      {/* <AuthGuard> */}
-      <Container className='dashboard-container' maxWidth="100%" sx={{ backgroundColor: '#f4f5f7' }}>
-        <UserList />
-      </Container>
+      <MainLayout>
+        {/* <AuthGuard> */}
+        <Container fullWidth className='dashboard-container' maxWidth="100%" sx={{ backgroundColor: '#f4f5f7' }}>
+          <UserList />
+        </Container>
+      </MainLayout>
       {/* </AuthGuard> */}
     </>
   );
 }
-
-

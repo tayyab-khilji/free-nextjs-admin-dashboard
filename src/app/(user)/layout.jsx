@@ -24,7 +24,3 @@ export default function RootLayout({ children }) {
   );
 }
 
-
-// // layout
-// import VendorLayout from 'src/layout/_vendor';
-//         <VendorLayout></VendorLayout>

@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Box, Container, Grid, useMediaQuery, Drawer, useTheme } from '@mui/material';
-import SidebarNav from 'src/components/_main/sidebarNav';
 import DashboardDetail from 'src/components/_main/dashboard/dashboardDetail';
 
 export default function VendorDashboardPage() {

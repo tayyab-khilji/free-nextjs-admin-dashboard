@@ -6,7 +6,7 @@ import AuthGuard from 'src/guards/auth';
 import DashboardPage from 'src/components/_main/dashboard/Dashboard';
 
 // layout
-import VendorLayout from 'src/layout/_vendor';
+import MainLayout from 'src/layout/_main';
 
 // Meta information
 export const metadata = {
@@ -22,12 +22,12 @@ export const metadata = {
 export default function page() {
   return (
     <>
-      <VendorLayout>
+      <MainLayout>
         {/* <AuthGuard> */}
         <Container fullWidth className='dashboard-container' maxWidth="100%" sx={{ backgroundColor: '#f4f5f7' }}>
           <DashboardPage />
         </Container>
-      </VendorLayout>
+      </MainLayout>
       {/* </AuthGuard> */}
     </>
   );

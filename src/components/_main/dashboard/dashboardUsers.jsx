@@ -121,7 +121,7 @@ const DashboardUserTable = ({ isLoading = false }) => {
     return (
         <TableContainer component={Paper} elevation={0} sx={{ borderRadius: 1 }}>
             <Table>
-                <TableHead sx={{ backgroundColor: 'black' }}>
+                <TableHead sx={{ backgroundColor: '#1A202C' }}>
                     <TableRow>
                         {TABLE_HEAD.map((headCell) => (
                             <StyledTableCell
