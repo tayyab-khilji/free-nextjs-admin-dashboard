@@ -299,6 +299,7 @@ import { LuLayoutDashboard } from 'react-icons/lu';
 import { FaRegUser } from 'react-icons/fa6';
 import { PiChatDots } from 'react-icons/pi';
 import { IoSettingsOutline } from 'react-icons/io5';
+import { MdLogout } from 'react-icons/md';
 
 import Scrollbar from 'src/components/Scrollbar';
 
@@ -308,7 +309,9 @@ export const navlinks = [
   { id: 1, title: 'Dashboard', slug: 'dashboard', icon: <LuLayoutDashboard /> },
   { id: 2, title: 'Chat Bot', slug: 'chat', icon: <PiChatDots /> },
   { id: 3, title: 'Users', slug: 'users', icon: <FaRegUser /> },
-  { id: 4, title: 'Settings', slug: 'settings', icon: <IoSettingsOutline /> }
+  { id: 4, title: 'Settings', slug: 'settings', icon: <IoSettingsOutline /> },
+
+  { id: 5, title: 'Logout', slug: 'auth/login', icon: <MdLogout /> }
 ];
 
 const openedMixin = (theme) => ({
@@ -468,7 +471,9 @@ export default function Sidebar({ handleDrawerClose, handleDrawerOpen, open }) {
             }}
           >
             {navlinks.map((item) => {
-              const isActive = active === item.slug;
+              // const isActive = active === item.slug;
+              const isActive = active.startsWith(item.slug);
+
 
               return (
                 <ListItem

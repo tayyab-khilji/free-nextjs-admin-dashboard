@@ -8,7 +8,6 @@ import dynamic from 'next/dynamic';
 
 // components
 import ChangePasswordSkeleton from 'src/components/_main/skeletons/auth/change-password/change-password';
-import BreadcrumbsSkeleton from 'src/components/_main/skeletons/products/breadcrumbs';
 
 // Meta information
 export const metadata = {
@@ -18,9 +17,6 @@ export const metadata = {
 };
 
 // components
-const HeaderBreadcrumbs = dynamic(() => import('src/components/headerBreadcrumbs'), {
-  loading: () => <BreadcrumbsSkeleton />
-});
 const AccountChangePassword = dynamic(() => import('src/components/_main/profile/edit/accountChangePassword'), {
   loading: () => <ChangePasswordSkeleton />
 });
@@ -28,22 +24,7 @@ const AccountChangePassword = dynamic(() => import('src/components/_main/profile
 export default function ChangePassword() {
   return (
     <Container>
-      <HeaderBreadcrumbs
-        heading="Change Password"
-        links={[
-          {
-            name: 'Home',
-            href: '/'
-          },
-          {
-            name: 'Profile',
-            href: '/profile/change-password'
-          },
-          {
-            name: 'Change Password'
-          }
-        ]}
-      />
+
       <Card
         sx={{
           maxWidth: 560,

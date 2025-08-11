@@ -140,7 +140,7 @@ export default function UploadAvatar({ ...props }) {
           >
             <AddPhotoAlternateRoundedIcon sx={{ mb: 1 }} />
 
-            <Typography variant="caption">{file ? 'Update photo' : 'Upload photo'}</Typography>
+            <Typography variant="caption">{file ? 'Update Logo' : 'Upload Logo'}</Typography>
           </PlaceholderStyle>
         </DropZoneStyle>
       </RootStyle>

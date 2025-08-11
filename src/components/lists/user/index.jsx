@@ -67,43 +67,6 @@ export default function UserList({ ...props }) {
         </ListItemIcon>
         Home
       </MenuItem>
-      {user?.role === ROLES.ADMIN || user?.role === ROLES.SUPER_ADMIN ? (
-        <MenuItem
-          onClick={() => {
-            router.push('/admin/dashboard');
-            setOpen(false);
-          }}
-        >
-          <ListItemIcon className="menu-icon">
-            <LuLayoutDashboard />
-          </ListItemIcon>
-          Admin Dashboard
-        </MenuItem>
-      ) : user?.role === ROLES.VENDOR ? (
-        <MenuItem
-          onClick={() => {
-            router.push('/vendor/dashboard');
-            setOpen(false);
-          }}
-        >
-          <ListItemIcon className="menu-icon">
-            <LuLayoutDashboard />
-          </ListItemIcon>
-          Vendor Dashboard
-        </MenuItem>
-      ) : (
-        <MenuItem
-          onClick={() => {
-            router.push('/create-shop');
-            setOpen(false);
-          }}
-        >
-          <ListItemIcon className="menu-icon">
-            <CiShop />
-          </ListItemIcon>
-          Become a seller
-        </MenuItem>
-      )}
       <MenuItem
         onClick={() => {
           setOpen(false);
@@ -130,11 +93,7 @@ export default function UserList({ ...props }) {
         onClick={() => {
           setOpen(false);
           router.push(
-            user.role === ROLES.ADMIN || user.role === ROLES.SUPER_ADMIN
-              ? '/admin/settings'
-              : user.role === ROLES.VENDOR
-                ? '/vendor/settings'
-                : '/profile/general'
+            '/settings'
           );
         }}
       >
@@ -147,11 +106,7 @@ export default function UserList({ ...props }) {
         onClick={() => {
           setOpen(false);
           router.push(
-            user.role === ROLES.ADMIN || user.role === ROLES.SUPER_ADMIN
-              ? '/admin/settings/change-password'
-              : user.role === ROLES.VENDOR
-                ? '/vendor/settings/change-password'
-                : '/profile/change-password'
+            '/profile/change-password'
           );
         }}
       >

@@ -1,8 +1,7 @@
 const ROLES = Object.freeze({
   SUPER_ADMIN: 'superAdmin',
   ADMIN: 'admin',
-  USER: 'user',
-  VENDOR: 'vendor'
+  USER: 'user'
 });
 
 export default ROLES;
