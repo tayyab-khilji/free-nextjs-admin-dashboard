@@ -15,9 +15,9 @@ import * as Yup from 'yup';
 import { useFormik, Form, FormikProvider } from 'formik';
 // icons
 import { MdOutlineVisibility, MdOutlineVisibilityOff } from 'react-icons/md';
-import ROLES from 'src/utils/userRoles';
 
 export default function AccountChangePassword() {
+
   const pathname = usePathname();
   const [loading, setloading] = React.useState(false);
   const [oldPassword, setOldPassword] = React.useState(false);
@@ -47,7 +47,7 @@ export default function AccountChangePassword() {
         confirmPassword: values.confirmPassword,
         id: user._id
       };
-      mutate(data);
+      // mutate(data);
     }
   });
 
@@ -62,16 +62,8 @@ export default function AccountChangePassword() {
       toast.error(err.response.data.message);
     }
   });
-  React.useEffect(() => {
-    if (!pathname.includes('admin') && user?.role.includes(ROLES.ADMIN)) {
-      router.push('/admin/settings/change-password');
-      toast("Admin can't access this page.", {
-        duration: 6000
-      });
-    }
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+
   const { errors, touched, handleSubmit, getFieldProps } = formik;
   return (
     <Box>

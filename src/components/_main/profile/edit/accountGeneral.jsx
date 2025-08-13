@@ -340,6 +340,8 @@ export default function AccountGeneral() {
   const [loading, setLoading] = useState(100);
   const [avatarId, setAvatarId] = useState(null);
   const [showPassword, setShowPassword] = useState(false);
+  const [editProfile, setEditProfile] = React.useState(false);
+
 
   const callbackLoading = useCallback((value) => setLoading(value), []);
 
@@ -405,7 +407,15 @@ export default function AccountGeneral() {
     }
   };
 
-  const handleEditProfile = () => formik.handleSubmit();
+
+  const handleEditProfile = () => {
+    setEditProfile(!editProfile);
+
+    if (editProfile) {
+      formik.handleSubmit();
+    } else {
+    }
+  };
 
   return (
     <FormikProvider value={formik}>
@@ -486,6 +496,7 @@ export default function AccountGeneral() {
                     {...getFieldProps('name')}
                     error={Boolean(touched.name && errors.name)}
                     helperText={touched.name && errors.name}
+                    disabled={!editProfile}
                   />
                 </Box>
 
@@ -500,6 +511,7 @@ export default function AccountGeneral() {
                     {...getFieldProps('apiKey')}
                     error={Boolean(touched.apiKey && errors.apiKey)}
                     helperText={touched.apiKey && errors.apiKey}
+                    disabled={!editProfile}
                   />
                 </Box>
 
@@ -542,7 +554,7 @@ export default function AccountGeneral() {
                   }}
                   onClick={handleEditProfile}
                 >
-                  Save Changes
+                  {!editProfile ? 'Edit Details' : 'Save Changes'}
                 </LoadingButton>
               </Box>
             </Card>
